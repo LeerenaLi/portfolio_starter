@@ -9,13 +9,16 @@
     justify-content: space-between;
     height: 350px;
     &__link {
-        border-radius: 100%;
+        transform: rotate(90deg);
         &:hover {
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            background-color: $main-color;
+            svg path {
+                fill: $main-color;
+            }
         }
-        img {
-            transform: rotate(90deg);
+        &:active {
+            svg path {
+                fill: #fff;
+            }
         }
     }
     &__divider {
