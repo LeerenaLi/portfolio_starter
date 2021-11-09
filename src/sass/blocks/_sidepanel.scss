@@ -1,5 +1,5 @@
 .sidepanel {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     top: 210px;
     left: 50px;
@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
     height: 350px;
+    &__link {
+        img {
+            transform: rotate(90deg);
+        }
+    }
     &__divider {
         height: 70px;
         width: 1px;
