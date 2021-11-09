@@ -3,8 +3,26 @@
     background: $main-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 12px 26px;
+    &:hover {
+        background: none;
+        border: 2px solid $main-color;
+        box-shadow: none;
+    }
+    &:active {
+        color: #fff;
+        background: $main-color;
+        border: 2px solid #fff;
+    }
 }
 .btn_clear {
     height: 45px;
     padding: 12px 26px;
+    &:hover {
+        border: 2px solid $main-color;
+    }
+    &:active {
+        color: #fff;
+        background: $main-color;
+        border: 2px solid #fff;
+    }
 }
