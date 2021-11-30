@@ -22,6 +22,13 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            padding: 0px 45px;
+            grid-template-columns: repeat(2,390px);
+            column-gap: 90px;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -59,6 +66,13 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            padding: 0px 30px;
+            grid-template-columns: repeat(2,300px);
+            column-gap: 60px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -94,6 +108,15 @@
             }
         }
     }
+    .resume {
+        padding-top: 60px;
+        &__wrapper {
+            padding: 0px 65px;
+            grid-template-columns: 420px;
+            row-gap: 40px;
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -104,6 +127,11 @@
     .title {
         &_fz48 {
             font-size: 26px;
+        }
+        &_fz36 {
+            font-size: 24px;
+            line-height: 36px;
+            margin-top: 20px;
         }
     }
     .hamburger {
@@ -125,16 +153,33 @@
         }
     }
     .about {
+        padding-top: 40px;
         &__wrapper {
             grid-template: 340px auto auto / 1fr;
-        }
-        &__subtitle {
-            font-size: 24px;
-            line-height: 36px;
-            margin-top: 20px;
         }
         &__skills {
             grid-template-columns: 1fr;
         }
+    }
+    .resume {
+        padding-top: 40px;
+        &__wrapper {
+            padding: 0 8px;
+            grid-template-columns: 1fr;
+        }
+        &__item {
+            &::before {
+                width: 42px;
+            }
+            &-icon {
+                left: 59px;
+            }
+            &-body {
+                padding: 10px 0 0 43px;
+            }
+        }
+    }
+    .divider {
+        margin: 15px auto 0 auto;
     }
 }
