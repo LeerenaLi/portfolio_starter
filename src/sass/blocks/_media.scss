@@ -32,13 +32,24 @@
     .skills {
         &__wrapper {
             grid-template-columns: repeat(auto-fit,270px);
-            justify-content: space-between;
+            justify-content: center;
         }
         &__progress {
             grid-template-columns: repeat(auto-fit,350px);
             grid-auto-rows: minmax(70px, auto);
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 30px 30px 0 30px;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
         }
     }
 }
@@ -90,14 +101,21 @@
             padding: 0 30px;
         }
         &__progress {
-            grid-template-columns: repeat(auto-fit, 320px);
-            justify-content: space-between;
+            grid-template-columns: repeat(auto-fit, 300px);
+            justify-content: space-around;
             padding: 0;
             column-gap: 0;
             margin-top: 30px;
             &-line {
                 width: 100%;
             }
+        }
+    }
+    .prices {
+        padding-top: 60px;
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 40px 0 0 0;
         }
     }
 }
@@ -161,7 +179,21 @@
             }
         }
     }
-    
+    .portfolio {
+        padding-top: 60px;
+        &__wrapper {
+            margin-top: 40px;
+            gap: 10px;
+        }
+    }
+    .prices {
+        padding-top: 40px;
+        &__wrapper {
+            justify-content: center;
+            row-gap: 20px;
+            padding: 20px 0 0 0;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -235,5 +267,17 @@
         &__progress {
             grid-template-columns: repeat(auto-fit, 280px);
         }
-    }   
+    }
+    .portfolio {
+        padding-top: 40px;
+        &__wrapper {
+            gap: 20px;
+        }
+    }
+    .prices {
+        &__wrapper {
+            grid-template-columns: 295px;
+
+        }
+    }      
 }
