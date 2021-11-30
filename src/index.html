@@ -127,7 +127,17 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/main_photo.jpg" alt="photo"">
+                    <!-- <img srcset="img/main_photo_min.jpg 300w,
+                                img/main_photo.jpg 400w"
+                        sizes="(max-width: 576px) 280px,
+                                (min-width: 577px) 400px"
+                    src="img/main_photo.jpg" alt="photo""> -->
+
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/main_photo_min.jpg">
+                        <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                        <img src="img/main_photo.jpg" alt="photo">
+                    </picture>
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
@@ -350,10 +360,10 @@
         </div>
     </section>
 
- <!--    <section class="portfolio">
+    <section class="portfolio">
         <div class="container">
             <div class="title title_fz16 title__section-title">Портфолио</div>
-            <div class="title title__section-subtitle">Мои работы</div>
+            <div class="title title_fz36 title__section-subtitle">Мои работы</div>
             <div class="divider"></div>
 
             <div class="portfolio__wrapper">
@@ -377,7 +387,7 @@
                 </a>
             </div>
         </div>
-    </section> -->
+    </section>
 
 <!--     <section class="prices">
         <div class="container">
