@@ -21,3 +21,22 @@ const counters = document.querySelectorAll('.skills__progress-counter'),
 counters.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
+
+//Smooth Scroll up
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 800) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+});
+
+$(function() {
+    $("a[href=#up]").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+      });
+});
+
