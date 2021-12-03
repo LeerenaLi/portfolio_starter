@@ -3,6 +3,8 @@
 const hamburger = document.querySelector('.hamburger'),
       menu = document.querySelector('.menu'),
       closeElem = document.querySelector('.menu__close');
+      closeOver = document.querySelector('.menu__overlay');
+      closeLink = document.querySelector('.menu__list');
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
@@ -10,6 +12,14 @@ hamburger.addEventListener('click', () => {
 
 
 closeElem.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
+closeOver.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
+closeLink.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
